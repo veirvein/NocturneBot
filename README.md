@@ -21,9 +21,9 @@ Please review the official [Osu! Rules](https://osu.ppy.sh/wiki/en/Rules) before
 
 ## 📋 Requirements
 
-- **OS**: Windows 10/11 (Linux/Mac not supported)
-- **Python**: 3.8 or higher
-- **Osu!**: Installed Osu! game with Mania mode
+- **OS**: Windows 10/11
+- **Python**: 3.9 or higher
+- **Osu!**: Installed with Mania mode enabled
 
 ### Python Dependencies
 
@@ -107,17 +107,17 @@ The built file will appear in the `dist/` folder.
 
 ```
 NocturneBot/
-├── main.py              # Application entry point. Initializes and launches the GUI and main bot loop.
-├── bot.py               # Core bot logic. Handles screen analysis, note detection, and input simulation (key presses).
-├── gui.py               # Graphical User Interface. Renders the control panel, settings, and status display.
-├── config.py            # Configuration management. Loads, saves, and validates settings from config.json.
-├── parser.py            # Game state parser. Analyzes the game screen to identify notes, timing, and score.
-├── sound.py             # Sound effects module. Plays audio cues for events like hits or errors.
-├── logger.py            # Logging system. Records application events, errors, and debug information to files.
-├── fonts/               # Directory containing font files (.ttf) used by the GUI for text rendering.
-├── config.json          # Configuration file storing user preferences and bot settings.
-├── requirements.txt     # List of Python package dependencies required to run the project.
-└── README.md            # Project documentation file (this file).
+├── main.py              # Entry point: initializes GUI and starts the main bot loop
+├── bot.py               # Core logic: analyzes screen, detects notes, simulates key presses
+├── gui.py               # GUI: renders control panel, settings, and status display
+├── config.py            # Config manager: loads, saves, and validates settings from config.json
+├── parser.py            # Parser: analyzes game screen to detect notes, timing, and score
+├── sound.py             # Sound module: plays audio cues for hits and errors
+├── logger.py            # Logger: records events, errors, and debug info to files
+├── fonts/               # Fonts directory: contains .ttf files for GUI text rendering
+├── config.json          # Config file: stores user preferences and bot settings
+├── requirements.txt     # Dependencies: lists required Python packages
+└── README.md            # Documentation: this file
 ```
 
 ## 🔧 Troubleshooting
