@@ -23,7 +23,6 @@ Please review the official [Osu! Rules](https://osu.ppy.sh/wiki/en/Rules) before
 
 - **OS**: Windows 10/11
 - **Python**: 3.9 or higher
-- **Osu!**: Installed with Mania mode enabled
 
 ### Python Dependencies
 
