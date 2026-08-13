@@ -1,53 +1,57 @@
 # NocturneBot - Osu! Mania Auto-play Bot
 
-Автоматизированный бот для игры в Osu! Mania с функциями авто-плея, гуманизации и поддержки различных модов.
+Automated bot for Osu! Mania with auto-play features, humanization, and support for various mods.
 
-## ⚠️ Важное предупреждение
+## ⚠️ Important Warning
 
-**Использование данного ПО может привести к блокировке вашего аккаунта Osu!** Используйте только на свой страх и риск. Рекомендуется использовать на второстепенных аккаунтах или в обучающих целях.
+**Using this software may result in a ban of your Osu! account.** Use at your own risk. It is recommended to use it on secondary accounts or for educational purposes only.
 
-## 🎯 Возможности
+This bot was designed **exclusively for video showcases and demonstrations**. It was **never intended to be used as a cheat** in actual gameplay. The developers assume no responsibility for any consequences arising from the misuse of this software. By using this bot, you acknowledge that all liability rests solely with you.
 
-- **Авто-плей**: Автоматическое прохождение карт в режиме Osu! Mania
-- **Гуманизация**: Симуляция человеческой игры с настройкой задержек и вариативности
-- **Поддержка модов**: HD, HR, EZ и другие моды
-- **GUI интерфейс**: Удобный графический интерфейс для управления
-- **Логирование**: Подробные логи для отладки
-- **Сборка в EXE**: Возможность создания standalone исполняемого файла
+Please review the official [Osu! Rules](https://osu.ppy.sh/wiki/en/Rules) before proceeding.
 
-## 📋 Требования
+## 🎯 Features
 
-- **ОС**: Windows 10/11 (Linux/Mac не поддерживаются)
-- **Python**: 3.8 или выше
-- **Osu!**: Установленная игра Osu! с режимом Mania
+- **Auto-play**: Automatic map completion in Osu! Mania mode
+- **Humanization**: Simulates human play with adjustable delays and variability
+- **Mod Support**: HD, HR, EZ, and other mods
+- **GUI Interface**: User-friendly graphical interface for control
+- **Logging**: Detailed logs for debugging
+- **EXE Build**: Capability to create a standalone executable file
 
-### Зависимости Python
+## 📋 Requirements
+
+- **OS**: Windows 10/11 (Linux/Mac not supported)
+- **Python**: 3.8 or higher
+- **Osu!**: Installed Osu! game with Mania mode
+
+### Python Dependencies
 
 ```bash
 pip install pyautogui pillow numpy pyinstaller
 ```
 
-## 🚀 Установка
+## 🚀 Installation
 
-1. Клонируйте репозиторий:
+1. Clone the repository:
 ```bash
 git clone https://github.com/veirvein/NocturneBot.git
 cd NocturneBot
 ```
 
-2. Установите зависимости:
+2. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Запустите бота:
+3. Run the bot:
 ```bash
 python main.py
 ```
 
-## ⚙️ Конфигурация
+## ⚙️ Configuration
 
-Настройки находятся в файле `config.json` (создается автоматически при первом запуске):
+Settings are located in the `config.json` file (created automatically on first launch):
 
 ```json
 {
@@ -60,95 +64,73 @@ python main.py
 }
 ```
 
-### Параметры конфигурации
+### Configuration Parameters
 
-| Параметр | Описание | По умолчанию |
+| Parameter | Description | Default |
 |----------|----------|--------------|
-| `delay_min` | Минимальная задержка между нажатиями (мс) | 10 |
-| `delay_max` | Максимальная задержка между нажатиями (мс) | 30 |
-| `humanize` | Включить гуманизацию (симуляцию человека) | true |
-| `auto_play` | Включить авто-плей | true |
-| `mods` | Список модов для использования | ["HD"] |
-| `log_level` | Уровень логирования | "INFO" |
+| `delay_min` | Minimum delay between key presses (ms) | 10 |
+| `delay_max` | Maximum delay between key presses (ms) | 30 |
+| `humanize` | Enable humanization (human simulation) | true |
+| `auto_play` | Enable auto-play | true |
+| `mods` | List of mods to use | ["HD"] |
+| `log_level` | Logging level | "INFO" |
 
-## 🎮 Использование
+## 🎮 Usage
 
-1. Запустите Osu! и перейдите в режим Mania
-2. Запустите бота: `python main.py`
-3. Выберите карту для прохождения
-4. Бот автоматически начнет игру
+1. Launch Osu! and switch to Mania mode
+2. Start the bot: `python main.py`
+3. Select a map to play
+4. The bot will automatically start playing
 
-### Горячие клавиши
+### Hotkeys
 
-- **F1**: Старт/Стоп авто-плей
-- **F2**: Переключение режима гуманизации
-- **F3**: Экстренная остановка
+- **F1**: Start/Stop auto-play
+- **F2**: Toggle humanization mode
+- **F3**: Emergency stop
 
-## 📦 Сборка в EXE
+## 📦 Building EXE
 
-Для создания исполняемого файла Windows:
+To create a Windows executable file:
 
 ```bash
 pyinstaller --onefile --windowed main.py --name NocturneBot
 ```
 
-Или используйте готовый spec файл:
+Or use the ready-made spec file:
 ```bash
 pyinstaller osu_mania_bot.spec
 ```
 
-Собранный файл появится в папке `dist/`.
+The built file will appear in the `dist/` folder.
 
-## 🗂️ Структура проекта
+## 🗂️ Project Structure
 
 ```
 NocturneBot/
-├── main.py              # Точка входа
-├── bot.py               # Основная логика бота
-├── gui.py               # Графический интерфейс
-├── config.py            # Управление конфигурацией
-├── parser.py            # Парсинг игры
-├── sound.py             # Звуковые эффекты
-├── logger.py            # Система логирования
-├── fonts/               # Шрифты для GUI
-├── config.json          # Файл конфигурации
-├── requirements.txt     # Зависимости Python
-└── README.md           # Документация
+├── main.py              # Application entry point. Initializes and launches the GUI and main bot loop.
+├── bot.py               # Core bot logic. Handles screen analysis, note detection, and input simulation (key presses).
+├── gui.py               # Graphical User Interface. Renders the control panel, settings, and status display.
+├── config.py            # Configuration management. Loads, saves, and validates settings from config.json.
+├── parser.py            # Game state parser. Analyzes the game screen to identify notes, timing, and score.
+├── sound.py             # Sound effects module. Plays audio cues for events like hits or errors.
+├── logger.py            # Logging system. Records application events, errors, and debug information to files.
+├── fonts/               # Directory containing font files (.ttf) used by the GUI for text rendering.
+├── config.json          # Configuration file storing user preferences and bot settings.
+├── requirements.txt     # List of Python package dependencies required to run the project.
+└── README.md            # Project documentation file (this file).
 ```
 
-## 🔧 Решение проблем
+## 🔧 Troubleshooting
 
-### Бот не видит игру
-- Убедитесь, что Osu! запущена в оконном режиме
-- Проверьте разрешение экрана (должно быть 1920x1080)
-- Запустите бота от имени администратора
+### High Latency
+- Close unnecessary applications
+- Reduce graphics settings in Osu!
+- Check `delay_min` and `delay_max` in the config
 
-### Высокая задержка
-- Закройте лишние приложения
-- Уменьшите настройки графики в Osu!
-- Проверьте `delay_min` и `delay_max` в конфиге
-
-### Ошибки при сборке EXE
-- Убедитесь, что все зависимости установлены
-- Проверьте наличие всех файлов в папке проекта
-- Попробуйте пересобрать с флагом `--clean`
-
-## 📝 Лицензия
-
-MIT License - свободное использование с указанием авторства.
-
-## 🤝 Contributing
-
-1. Fork репозиторий
-2. Создайте ветку (`git checkout -b feature/AmazingFeature`)
-3. Закоммитьте изменения (`git commit -m 'Add some AmazingFeature'`)
-4. Пушьте в ветку (`git push origin feature/AmazingFeature`)
-5. Откройте Pull Request
-
-## 📞 Контакты
-
-Автор: veirvein  
-GitHub: https://github.com/veirvein/NocturneBot
+### EXE Build Errors
+- Ensure all dependencies are installed
+- Verify all project files are present
+- Try rebuilding with the `--clean` flag
 
 ---
-**Помните**: Используйте данное ПО ответственно и уважайте правила сообщества Osu!
+**Remember**: Use this software responsibly and respect the Osu! community rules.
